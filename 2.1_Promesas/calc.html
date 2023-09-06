@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="txtNumeroUno"></label>
+        <input type="number" id="txtNumeroUno">
+        <br>
+        <label for="txtNumeroDos"></label>
+        <input type="number" id="txtNumeroDos">
+
+        <button id="divicion">DIVIDIR</button>
+    </div>
+
+
+    <script>
+        const numUno = document.getElementById("txtNumeroUno");
+        const numDos = document.getElementById("txtNumeroDos");
+        const btn =document.getElementById("divicion");
+
+        
+
+        btn.addEventListener("click", function () {
+            let promesa = new Promise(function (resolve, reject) {
+                    const divisor = parseFloat(numUno.value);
+                    const dividendo = parseFloat(numDos.value);
+                    if (dividendo === 0) {
+                        throw new Error("No se puede dividir entre 0");
+                    }
+                    const resultado = divisor / dividendo;
+                    resolve(resultado);
+            });
+            promesa.then(result => {
+                alert(`El resultado de la división es: ${result}`);
+            })
+            .catch(error => {
+                alert(error);
+            });
+        });
+    </script>
+</body>
+</html>
