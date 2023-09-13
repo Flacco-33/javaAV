@@ -16,14 +16,11 @@
         <button id="divicion">DIVIDIR</button>
     </div>
 
-
     <script>
         const numUno = document.getElementById("txtNumeroUno");
         const numDos = document.getElementById("txtNumeroDos");
         const btn =document.getElementById("divicion");
-
         
-
         btn.addEventListener("click", function () {
             let promesa = new Promise(function (resolve, reject) {
                     const divisor = parseFloat(numUno.value);
@@ -43,4 +40,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
