@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    justify-content: center;
+    align-self: center;
+}
+
+.grafica{
+    height: 400px;
+    padding: 10px;
+}
+
+#imagenes{
+    margin: 2px;
+    background-color: aqua;
+}
